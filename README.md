@@ -759,7 +759,10 @@ or `Translation.byLocale()` constructors to create the translation objects.
 An utility script to automatically export all translatable strings from your project was contributed
 by <a href="https://github.com/bauerj">Johann Bauer</a>. Simply
 run `flutter pub run i18n_extension:getstrings` in your project root directory and you will get a
-list of strings to translate in `strings.json`. This file can then be sent to your translators or be
+list of strings to translate in a file. 
+This file can be exported on `.poc` or `.json` format, and the path of the export file is specified using the `--output-file` or `-f` option appended to the above command (by default its `./strings.pot`).
+For example: `flutter pub run i18n_extension:getstrings -f <desiredExportedFilePath>/strings.json`
+This file can then be sent to your translators or be
 imported in translation services like _Crowdin_, _Transifex_ or _Lokalise_. You can use it as part
 of your CI pipeline in order to always have your translation templates up to date.
 
